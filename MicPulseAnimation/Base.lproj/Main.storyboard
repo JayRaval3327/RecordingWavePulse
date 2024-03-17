@@ -1,24 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EGB-pV-nya">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Assistant-Regular.ttf">
+            <string>Assistant-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="Btf-Cy-vig">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="EGB-pV-nya" customClass="ViewController" customModule="MicPulseAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DmA-XY-JAx">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQ6-Hr-hB3">
+                                <rect key="frame" x="20" y="699.33333333333337" width="353" height="18.666666666666629"/>
+                                <fontDescription key="fontDescription" name="Assistant-Regular" family="Assistant" pointSize="16"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mGc-2Q-oJT">
+                                <rect key="frame" x="161.66666666666674" y="738" width="70" height="70"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="30K-Cw-lUD"/>
+                                    <constraint firstAttribute="width" constant="70" id="yM7-vN-ej2"/>
+                                </constraints>
+                            </view>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="62t-KW-p97">
+                                <rect key="frame" x="166.66666666666666" y="743" width="60" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AnP-uF-59i">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="mic.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="didTapRecording:" destination="EGB-pV-nya" eventType="touchUpInside" id="ar9-xF-9hF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="AnP-uF-59i" firstAttribute="top" secondItem="62t-KW-p97" secondAttribute="top" id="8VI-TO-sm3"/>
+                                    <constraint firstAttribute="bottom" secondItem="AnP-uF-59i" secondAttribute="bottom" id="GGy-2D-nI2"/>
+                                    <constraint firstItem="AnP-uF-59i" firstAttribute="leading" secondItem="62t-KW-p97" secondAttribute="leading" id="UeY-iD-C1r"/>
+                                    <constraint firstAttribute="height" constant="60" id="b7n-GK-lUF"/>
+                                    <constraint firstAttribute="width" constant="60" id="tYJ-Wl-O20"/>
+                                    <constraint firstAttribute="trailing" secondItem="AnP-uF-59i" secondAttribute="trailing" id="xZD-4o-qCt"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YrG-J0-SMd"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mGc-2Q-oJT" firstAttribute="centerX" secondItem="DmA-XY-JAx" secondAttribute="centerX" id="4zt-qR-9F7"/>
+                            <constraint firstItem="62t-KW-p97" firstAttribute="centerX" secondItem="DmA-XY-JAx" secondAttribute="centerX" id="JoC-KU-LFd"/>
+                            <constraint firstItem="YrG-J0-SMd" firstAttribute="bottom" secondItem="mGc-2Q-oJT" secondAttribute="bottom" constant="10" id="RIe-Sc-Tgb"/>
+                            <constraint firstItem="YrG-J0-SMd" firstAttribute="bottom" secondItem="62t-KW-p97" secondAttribute="bottom" constant="15" id="TYv-7L-1PB"/>
+                            <constraint firstItem="YrG-J0-SMd" firstAttribute="trailing" secondItem="zQ6-Hr-hB3" secondAttribute="trailing" constant="20" id="fjX-Ye-fPM"/>
+                            <constraint firstItem="YrG-J0-SMd" firstAttribute="bottom" secondItem="zQ6-Hr-hB3" secondAttribute="bottom" constant="100" id="pSa-x5-6xg"/>
+                            <constraint firstItem="zQ6-Hr-hB3" firstAttribute="leading" secondItem="YrG-J0-SMd" secondAttribute="leading" constant="20" id="usI-Xq-nVd"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="QOC-w6-qiX"/>
+                    <connections>
+                        <outlet property="btnRecording" destination="AnP-uF-59i" id="Kds-6E-YPY"/>
+                        <outlet property="speechTextLabel" destination="zQ6-Hr-hB3" id="X1N-Xm-VXn"/>
+                        <outlet property="viewMic" destination="62t-KW-p97" id="IQE-Vp-daS"/>
+                        <outlet property="wave" destination="mGc-2Q-oJT" id="lP7-0D-uug"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ofk-6e-CAr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="3073" y="631"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="mic.fill" catalog="system" width="110" height="128"/>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
